@@ -1,0 +1,55 @@
+extends layout
+
+block content
+  .container#loginform
+    br
+    br
+    br
+    .row
+      .col-md-2
+      .col-md-8
+        .panel.panel-primary
+          .panel-heading.text-center Touro Chat Login
+          .panel-body
+            form.text-center#usernameform
+              input.form-control#username(type='text', placeholder='Choose a Nickname' required)
+              br
+              label.text-center
+                p Pick Your Avatar
+              br
+              button.avatarform(type='submit', name='avatar', value='/images/avatar1.png')
+                img.avatar(src='/images/avatar1.png')
+              button.avatarform(type='submit', name='avatar', value='/images/avatar2.png')
+                img.avatar(src='/images/avatar2.png')
+              button.avatarform(type='submit', name='avatar', value='/images/avatar3.png')
+                img.avatar(src='/images/avatar3.png')
+              button.avatarform(type='submit', name='avatar', value='/images/avatar4.png')
+                img.avatar(src='/images/avatar4.png')
+              button.avatarform(type='submit', name='avatar', value='/images/avatar5.png')
+                img.avatar(src='/images/avatar5.png')
+
+    script.
+       $("#loginform").draggable();
+
+  br
+  br
+  .container#chatWindow
+    .row
+      .col-md-1
+      .col-md-8
+        .panel.panel-primary
+          #main-chat.panel-heading.text-center Touro Chat Room
+          .panel-body
+            #feedback
+            #output 
+          .panel-footer.panel-primary
+
+              div#message
+              br
+              p.text-center
+                button.btn.btn-warning#send send
+      .col-md-3
+        .panel.panel-success
+          .panel-heading.text-center Users
+          #user-window.panel-body
+  script(src='/javascripts/chat.js')

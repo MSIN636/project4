@@ -1,0 +1,21 @@
+#output{
+  height:350px;
+  overflow:scroll;
+}
+
+#message{
+  overflow: hidden
+}
+
+.emojionearea .emojionearea-editor {
+width:auto !important;
+height:auto !important;
+
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
